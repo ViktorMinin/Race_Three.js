@@ -88,7 +88,7 @@ class game {
         })
         this.touches = [];
         addEventListener('touchstart', (e) => {
-            if (e.changedTouches[0].screenX < window.outerWidth / 2) {
+            if (e.changedTouches[0].screenX < window.innerWidth / 2) {
                 this.touches[0] = true;
             }
             else {
@@ -96,7 +96,7 @@ class game {
             }
         }, false);
         addEventListener('touchend', (e) => {
-            if (e.changedTouches[0].screenX < window.outerWidth / 2) {
+            if (e.changedTouches[0].screenX < window.innerWidth / 2) {
                 this.touches[0] = false;
             }
             else {
