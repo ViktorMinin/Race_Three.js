@@ -24,8 +24,8 @@ class game {
     constructor(speed, cam) {
         this.canvas = document.getElementById('canvas');
         this.canvas.style.display = 'block';
-        this.width = window.screen.width;
-        this.height = window.screen.height;
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
         this.canvas.setAttribute('width', this.width);
         this.canvas.setAttribute('height', this.height);
 
