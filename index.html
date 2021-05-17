@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js app</title>
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+	</style>
+	<link href="style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id='menu'>
+		<div id='start' onclick="document.location='start.html'">
+			<p>Start</p>
+		</div>
+		<div id='best_score'>The best score:<p id="p_best_score">0</p>
+		</div>
+		<div id='music'>
+			<p> {Training in the Fire} by Twin Musicom (twinmusicom.org)</p>
+		</div>
+	</div>
+	<canvas id="canvas" style="display: none;">
+	</canvas>
+	<script>
+		window.onload = check;
+		function check() {
+			var y = parseInt(localStorage.getItem('best_score'));
+			var x = parseInt(localStorage.getItem('score'));
+			if (x >= y) {
+				document.getElementById('p_best_score').innerHTML = localStorage.getItem('score');
+				localStorage.setItem('best_score', (localStorage.getItem('score')));
+			}
+			else if (isNaN(y)) {
+				localStorage.setItem('best_score', 0);
+			}
+			else {
+				document.getElementById('p_best_score').innerHTML = localStorage.getItem('best_score');
+			}
+		}
+	</script>
+</body>
+</html>

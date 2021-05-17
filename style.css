@@ -1,0 +1,139 @@
+
+#canvas{
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+#menu{
+    height: 40vw;
+    background: url("images/second.png");
+    background-size: contain;
+    width: 72vw;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    
+}
+#score{
+    width: 30px;
+    height: 40px;
+    position: fixed;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: calc( (100vmax - 480px)/(1280 - 480) * (100 - 76) + 76px);
+    text-shadow: 2px 2px 5px mediumseagreen;
+    color: mediumspringgreen;
+    visibility: hidden;
+}
+
+#start{
+    width: auto;
+    height: 10vw;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    background-color: rgba(0, 255, 21, 0);
+    border-color:  rgb(0, 255, 21);
+    border-style: solid;
+    font-size: 5vw;
+    font-family: 'Goldman';
+    font-style: normal;
+    font-weight: normal; 
+    cursor:pointer;
+}
+#start:hover{
+    background-color: rgba(0, 255, 21, 0.65);
+    padding: 15px;
+    margin: 10px;
+}
+#start p{
+    font-family: "Goldman";
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    top: inherit;
+    transform: translate(0,50%);
+}
+#best_score{
+    width: auto;
+    z-index: 1;
+    height: 15vw;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    background-color: rgba(0, 255, 21, 0);
+    border-color: rgb(0, 255, 21);
+    border-style: solid;
+    font-size: 5vw;
+    font-family: "Goldman";
+}
+#best_score:hover{
+    background-color: rgba(0, 255, 21, 0.65);
+    padding: 15px;
+    margin: 10px;
+}
+#best_score p{
+    font-family: "Goldman";
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    top: inherit;
+    transform: translate(0,50%);
+}
+#music{
+    width: auto;
+    height: 2vw;
+    margin-top: inherit;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding:inherit;
+    position: relative;
+    text-align: center;
+    border-color: rgb(0, 255, 21);
+    border-style: solid;
+}
+#music p{
+ color: white;
+ font-family: "Goldman";
+ margin: 0%;
+ padding: 0%;
+ position: relative;
+ top: inherit;
+ bottom: auto;
+ transform: translate(0,25%);
+}
+#music_off{
+    position: absolute;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+    top: 1vw;
+    right: 1vw;
+    width: 10vw;
+    height: 10vw;
+    border-color: rgb(0, 255, 21);
+    border-style: solid;
+    cursor:pointer;
+
+}
+#music_off:hover{
+    background-color: rgba(0, 255, 21, 0.65);
+    padding: 2px;
+    margin: 2px;
+}
+#music_off img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}

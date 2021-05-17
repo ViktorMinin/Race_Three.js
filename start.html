@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>js app</title>
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+	</style>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id='score'>
+		<p id="cls">0</p>
+	</div>
+	<div id='music_off'><img src="images/4p4jatesb7mn8kgc2o68dnauop-1dfdc74319011933e91e026bdef85f7e.png"></div>
+	<canvas id="canvas" style="display: none;">
+	</canvas>
+	<!--<script src="scripts/three.js"></script>-->
+	<script type="module">
+
+		import { main } from './scripts/main.js';
+		import { main_mob } from "./scripts/main_mob.js";
+		window.onload = function () {
+			if (/Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent)) {
+				main_mob();
+			}
+			else {
+				main();
+			}
+		}
+	</script>
+	<script type="module" src="https://cdn.jsdelivr.net/npm/three@0.124/examples/jsm/loaders/GLTFLoader.js"></script>
+</body>
+
+</html>
